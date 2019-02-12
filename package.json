@@ -1,0 +1,28 @@
+{
+  "name": "chatfuel-proxy",
+  "version": "0.0.1",
+  "description": "proxy chatfuel to recast.ai",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolliy/chatfuel-proxy.git"
+  },
+  "keywords": [
+    "proxy"
+  ],
+  "author": "Stephan Mante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bolliy/chatfuel-proxy/issues"
+  },
+  "homepage": "https://github.com/bolliy/chatfuel-proxy#readme"
+}
