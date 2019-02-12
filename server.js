@@ -31,7 +31,7 @@ express()
       .then(body => {
         // Format messages to Chatfuel format
         const formattedMessages = body.data.results.messages.map(chatfuelFormat);
-
+        console.log(formattedMessages);
         // Sends the answer back to Chatfuel
         res.json({
           messages: formattedMessages,
