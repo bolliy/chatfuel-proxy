@@ -7,7 +7,7 @@ const axios = require('axios');
 var SERVER_IP = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
     PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-const SAPCAI_REQUEST_TOKEN = 'XXX' || process.env.TOKEN;
+const SAPCAI_REQUEST_TOKEN = process.env.TOKEN || 'XXX';
 
 // Setting up our server
 express()
