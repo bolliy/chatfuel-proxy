@@ -35,6 +35,9 @@ express()
         res.json({
           messages: formattedMessages,
         });
+      })
+      .catch(error => {
+        console.log(error);
       });
   })
   .listen(PORT,SERVER_IP, () => console.log(`App started on port ${PORT}`));
