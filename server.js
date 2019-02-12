@@ -7,7 +7,7 @@ const axios = require('axios');
 var SERVER_IP = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
     PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-const SAPCAI_REQUEST_TOKEN = 'XXX';
+const SAPCAI_REQUEST_TOKEN = 'XXX' || process.env.TOKEN;
 
 // Setting up our server
 express()
@@ -40,7 +40,10 @@ express()
         console.log(error);
       });
   })
-  .listen(PORT,SERVER_IP, () => console.log(`App started on port ${PORT}`));
+  .listen(PORT,SERVER_IP, () => {
+    console.log(`App started on port ${PORT}`);
+    console.log('Token '+SAPCAI_REQUEST_TOKEN);
+  });
 
 // We need to manually "translate" SAP Conversational AI message object to Chatfuel's format
 // For now I only implemented text and images but you can add others if you need to
